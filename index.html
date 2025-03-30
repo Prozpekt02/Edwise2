@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdWise - Your Personalized Education Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #1a3c5e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header img {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #2a5470;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: #e6f0fa;
+        }
+        .hero h2 {
+            color: #1a3c5e;
+        }
+        .section {
+            padding: 40px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #1a3c5e;
+        }
+        .dashboard {
+            display: none;
+            padding: 20px;
+        }
+        .dashboard h3 {
+            color: #1a3c5e;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #2a5470;
+            color: white;
+        }
+        footer {
+            background-color: #1a3c5e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-form input, .dashboard select, .dashboard button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-form button, .dashboard button {
+            background-color: #2a5470;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .login-form button:hover, .dashboard button:hover {
+            background-color: #1a3c5e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="edwise-logo.png" alt="EdWise Logo">
+        <h1>EdWise</h1>
+        <p>Your Personalized Education Platform</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#login">User Login</a></li>
+            <li><a href="#help">Customer Help</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="home">
+        <h2>Welcome to EdWise</h2>
+        <p>EdWise is an innovative education startup that helps students find the best online or offline learning platforms, courses, and top-rated tutors tailored to their needs. Simplify your learning journey with personalized recommendations and high-quality resources.</p>
+    </div>
+
+    <div class="section" id="login">
+        <h2>User Login</h2>
+        <div class="login-form">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button onclick="showDashboard()">Login</button>
+        </div>
+    </div>
+
+    <div class="dashboard" id="dashboard">
+        <h2>Welcome to Your Dashboard</h2>
+        
+        <div class="section">
+            <h3>Select Your Course</h3>
+            <select>
+                <option value="">Select Subject</option>
+                <option value="math">Mathematics</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="programming">Programming</option>
+            </select>
+            <select>
+                <option value="">Select Lecturer</option>
+                <option value="dr-john">Dr. John Smith</option>
+                <option value="prof-emma">Prof. Emma Brown</option>
+                <option value="mr-alex">Mr. Alex Carter</option>
+            </select>
+            <select>
+                <option value="">Select Mode</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+                <option value="hybrid">Hybrid</option>
+            </select>
+            <button>Enroll Now</button>
+        </div>
+
+        <div class="section">
+            <h3>Course Content</h3>
+            <p>Access your lectures, notes, and resources here.</p>
+            <button>View Content</button>
+        </div>
+
+        <div class="section">
+            <h3>Quizzes</h3>
+            <p>Test your knowledge with interactive quizzes.</p>
+            <button>Start Quiz</button>
+        </div>
+
+        <div class="section">
+            <h3>Assignments</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Assignment</th>
+                        <th>Subject</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Math Worksheet 1</td>
+                        <td>Mathematics</td>
+                        <td>2025-04-05</td>
+                        <td>Not Submitted</td>
+                    </tr>
+                    <tr>
+                        <td>Science Project</td>
+                        <td>Science</td>
+                        <td>2025-04-10</td>
+                        <td>Submitted</td>
+                    </tr>
+                    <tr>
+                        <td>History Essay</td>
+                        <td>History</td>
+                        <td>2025-04-15</td>
+                        <td>In Progress</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>EdWise is an innovative education startup founded by Kishan Kumar Sai, a passionate B.Tech graduate dedicated to transforming the way students learn. Our mission is to simplify decision-making by curating high-quality educational resources, offering personalized recommendations, and guiding students toward the best choices for their academic and career growth.</p>
+        <p>Our leadership team consists of talented B.Tech graduates:</p>
+        <ul>
+            <li><strong>Founder:</strong> Kishan Kumar Sai</li>
+            <li><strong>CEO:</strong> A. Asritha</li>
+            <li><strong>CFO:</strong> Rishabh</li>
+            <li><strong>CTO:</strong> Atharva</li>
+        </ul>
+        <p>Together, we are committed to ensuring learners receive the best education effortlessly.</p>
+    </div>
+
+    <div class="section" id="help">
+        <h2>Customer Help</h2>
+        <p>For any queries, reach out to us at:</p>
+        <p><strong>Email:</strong> edwise@help.com</p>
+        <p><strong>Instagram:</strong> @edwise_official</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 EdWise. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showDashboard() {
+            document.getElementById('dashboard').style.display = 'block';
+            document.getElementById('login').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
